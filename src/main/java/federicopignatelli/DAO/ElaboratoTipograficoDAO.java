@@ -16,4 +16,18 @@ public class ElaboratoTipograficoDAO {
         transaction.commit();
         System.out.println("Operazione di inserimento, elaborato numero " + elaboratotipografico.getISBN() + " aggiunto correttamente!");
     }
+
+    public void RimuoviISBN(long ISBN) {
+        ElaboratoTipografico found = em.find(ElaboratoTipografico.class, ISBN);
+
+        if (found != null) {
+            EntityTransaction transaction = em.getTransaction();
+            transaction.begin();
+            em.remove(found);
+            transaction.commit();
+            System.out.println("L'elaborato è stato cancellato correttamente");
+        } else {
+            System.err.println("L'elaborato con l'ISBN " + ISBN + " non è stato trovato");
+        }
+    }
 }
