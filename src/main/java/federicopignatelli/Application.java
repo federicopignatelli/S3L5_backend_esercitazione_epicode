@@ -1,8 +1,8 @@
 package federicopignatelli;
 import federicopignatelli.DAO.ElaboratoTipograficoDAO;
-import federicopignatelli.entities.Libro;
-import federicopignatelli.entities.Rivista;
-import federicopignatelli.entities.TipoRivista;
+import federicopignatelli.DAO.PrestitoDAO;
+import federicopignatelli.DAO.UtenteDAO;
+import federicopignatelli.entities.*;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -41,7 +41,12 @@ public class Application {
 //        System.out.println(sd.TrovaAutore("Giovanni"));
 //        System.out.println(sd.TrovaAnnoPubblicazione(LocalDate.of(2018, 2, 2 )));
 
+        UtenteDAO ut = new UtenteDAO(em);
+        Utente Giacomo = new Utente("Giacomo", "Lollaro", LocalDate.of(1996, 5, 20 ));
+        ut.save(Giacomo);
 
+//        PrestitoDAO pr = new PrestitoDAO(em);
+//        Prestito Prestito = new Prestito(, Giacomo, LocalDate.of(2022, 2, 2 ), LocalDate.of(2022, 3, 3 ), LocalDate.of(2022, 3, 1 ));
 
 
 
