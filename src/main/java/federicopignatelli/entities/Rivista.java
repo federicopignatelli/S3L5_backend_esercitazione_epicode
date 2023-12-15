@@ -14,7 +14,7 @@ public class Rivista extends ElaboratoTipografico{
     public Rivista() {
     }
 
-    public Rivista(String titolo, String genere, LocalDate annoPubblicazione, int numeroPagine, TipoRivista tipoRivista) {
+    public Rivista(String titolo, LocalDate annoPubblicazione, int numeroPagine, TipoRivista tipoRivista) {
         super(titolo, annoPubblicazione, numeroPagine);
         this.tipoRivista = tipoRivista;
     }

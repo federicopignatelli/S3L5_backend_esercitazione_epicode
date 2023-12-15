@@ -13,4 +13,6 @@ public class Prestito {
     @ManyToOne
     @JoinColumn(name = "nTesseraUtente")
     private Utente utente;
+
+
 }
