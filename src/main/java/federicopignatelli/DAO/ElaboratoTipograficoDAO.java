@@ -2,6 +2,9 @@ package federicopignatelli.DAO;
 import federicopignatelli.entities.ElaboratoTipografico;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.TypedQuery;
+import java.time.LocalDate;
+import java.util.List;
 
 public class ElaboratoTipograficoDAO {
     private final EntityManager em;
@@ -29,5 +32,25 @@ public class ElaboratoTipograficoDAO {
         } else {
             System.err.println("L'elaborato con l'ISBN " + ISBN + " non è stato trovato");
         }
+    }
+
+    public ElaboratoTipografico TrovaISBN(long ISBN) {
+        return em.find(ElaboratoTipografico.class, ISBN);
+    }
+
+//    public ElaboratoTipografico TrovaAutore(String autore) {
+//        return em.find(ElaboratoTipografico.class, autore);
+//    }
+
+    public List<ElaboratoTipografico> TrovaAutore(String autore) {
+        TypedQuery<ElaboratoTipografico> TrovaconAutore = em.createNamedQuery("TrovaAutore", ElaboratoTipografico.class);
+        TrovaconAutore.setParameter("autore", autore);
+        return TrovaconAutore.getResultList();
+    }
+
+    public List<ElaboratoTipografico> TrovaAnnoPubblicazione(LocalDate annoPubblicazione) {
+        TypedQuery<ElaboratoTipografico> TrovaconAnno = em.createNamedQuery("TrovaAnnoPubblicazione", ElaboratoTipografico.class);
+        TrovaconAnno.setParameter("annoPubblicazione", annoPubblicazione);
+        return TrovaconAnno.getResultList();
     }
 }

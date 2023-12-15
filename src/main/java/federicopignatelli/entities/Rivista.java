@@ -26,4 +26,14 @@ public class Rivista extends ElaboratoTipografico{
     public void setTipoRivista(TipoRivista tipoRivista) {
         this.tipoRivista = tipoRivista;
     }
+
+    @Override
+    public String toString() {
+        return "Rivista{" +
+                "tipoRivista=" + tipoRivista +
+                ", titolo='" + titolo + '\'' +
+                ", annoPubblicazione=" + annoPubblicazione +
+                ", numeroPagine=" + numeroPagine +
+                '}';
+    }
 }

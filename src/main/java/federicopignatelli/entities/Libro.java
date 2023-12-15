@@ -30,4 +30,15 @@ public class Libro extends ElaboratoTipografico{
     public void setGenere(String genere) {
         this.genere = genere;
     }
+
+    @Override
+    public String toString() {
+        return "Libro{" +
+                "autore='" + autore + '\'' +
+                ", genere='" + genere + '\'' +
+                ", titolo='" + titolo + '\'' +
+                ", annoPubblicazione=" + annoPubblicazione +
+                ", numeroPagine=" + numeroPagine +
+                '}';
+    }
 }

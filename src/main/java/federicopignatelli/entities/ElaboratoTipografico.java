@@ -44,4 +44,14 @@ public class ElaboratoTipografico {
     public int getNumeroPagine() {
         return numeroPagine;
     }
+
+    @Override
+    public String toString() {
+        return "ElaboratoTipografico{" +
+                "ISBN=" + ISBN +
+                ", titolo='" + titolo + '\'' +
+                ", annoPubblicazione=" + annoPubblicazione +
+                ", numeroPagine=" + numeroPagine +
+                '}';
+    }
 }

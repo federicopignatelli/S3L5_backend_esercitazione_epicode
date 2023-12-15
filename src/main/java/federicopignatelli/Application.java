@@ -30,12 +30,20 @@ public class Application {
 //        Libro LogicaUniversità = new Libro("Logica per l'università", "prof. Pitagora", "Accademico", LocalDate.of(2020, 1, 1), 276);
 //        sd.save(LogicaUniversità);
 //
-//        Rivista Automoto = new Rivista("Automoto.it", LocalDate.of(2022, 5, 3), 92, TipoRivista.SEMESTRALE);
-//        sd.save(StyleVogue);
+//        Rivista Automoto = new Rivista("Automoto.it", LocalDate.of(2018, 2, 2 ), 92, TipoRivista.SEMESTRALE);
+//        sd.save(Automoto);
 
 //        Libro dacancellare = new Libro("LOL", "LOL", "LOL", LocalDate.of(2020, 1, 1), 20);
 //        sd.save(dacancellare);
-        sd.RimuoviISBN(5);
+//        sd.RimuoviISBN(5);
+
+//        System.out.println(sd.TrovaISBN(2));
+//        System.out.println(sd.TrovaAutore("Giovanni"));
+//        System.out.println(sd.TrovaAnnoPubblicazione(LocalDate.of(2018, 2, 2 )));
+
+
+
+
 
         em.close();
         emf.close();
