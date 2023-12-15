@@ -1,11 +1,15 @@
 package federicopignatelli.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import java.time.LocalDate;
 @Entity
 public class Rivista extends ElaboratoTipografico{
+    @Enumerated(EnumType.STRING)
+    @Column(name = "Tipo_di_rivista")
     public TipoRivista tipoRivista;
-    public String genere;
 
     public Rivista() {
     }
@@ -21,13 +25,5 @@ public class Rivista extends ElaboratoTipografico{
 
     public void setTipoRivista(TipoRivista tipoRivista) {
         this.tipoRivista = tipoRivista;
-    }
-
-    public String getGenere() {
-        return genere;
-    }
-
-    public void setGenere(String genere) {
-        this.genere = genere;
     }
 }
