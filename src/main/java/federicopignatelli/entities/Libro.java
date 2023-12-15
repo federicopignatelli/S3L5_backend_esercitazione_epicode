@@ -1,11 +1,11 @@
 package federicopignatelli.entities;
 
+import javax.persistence.Entity;
 import java.time.LocalDate;
-
+@Entity
 public class Libro extends ElaboratoTipografico{
     public String autore;
     public String genere;
-
     public Libro() {
     }
 

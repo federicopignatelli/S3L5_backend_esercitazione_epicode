@@ -1,7 +1,8 @@
 package federicopignatelli.entities;
 
+import javax.persistence.Entity;
 import java.time.LocalDate;
-
+@Entity
 public class Rivista extends ElaboratoTipografico{
     public TipoRivista tipoRivista;
     public String genere;

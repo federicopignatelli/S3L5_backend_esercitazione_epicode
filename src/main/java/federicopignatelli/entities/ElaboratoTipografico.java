@@ -1,6 +1,9 @@
 package federicopignatelli.entities;
 import java.time.LocalDate;
 import javax.persistence.*;
+@Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@Table(name = "Catalogo")
 public class ElaboratoTipografico {
     //ATTRIBUTI
     @Id
